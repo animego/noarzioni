@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="with=device-scale, initial-scale=1">
+      <title>תנועת הנוער הציוני סוציאליסטי</title>
+      <link rel="stylesheet" href="{% static 'styles.css' %}">
+      <link rel="icon" href="images/icon.png"/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="main-content">
+      <section class="about" id="about">
+            <nav>
+                  <a href="index.html"><img src="{% static 'images/icon.png' %}"></a>
+                  <div class="nav-links" id="navLinks">
+                        <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                        <ul>
+                              <li><a href="/kesher">צרו קשר</a></li>
+                              <li><a href="/hofesh-habitoi">הזה של אלעד</a></li>
+                              <li><a href="/matsa">המצע שלנו</a></li>
+                              <li><a href="/">ראשי</a></li>
+                        </ul>
+                  </div>
+                  <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+                  </nav>
+
+            <div class="about-text">
+                  <h1>אודות</h1>
+                  <p> .תנועת הנוער הציוני סוציאליסטי" זו תנועת נוער ישראלית סוציאליסטית אשר תומכת בשמאל במפה הפוליטית 
+                  </br>התנועה הוקמה ביוני 2022 כאשר אלעד מוחין ועיטם שירן (המייסדים)  מבית ספר "רעות לאומנויות" שבחיפה
+                  <br> .הקימו את התנועה כפרויקט "בית ספרי" (כביכול)<br>
+                        .התנועה תומכת במפלגות "מרצ" ו-"העבודה" ובעוד תנועות פוליטיות אשר תומכות באותם עקרונות<br>
+                        "תנועת הנוער הציוני סוציאליסטי"
+                        ,תומכת בשוויון זכויות, צדק חברתי, פתרון שתי המדינות, שמירה על הסביבה, פמיניזם מרקסיסטי
+                        <br> .מדיניות כלכלית-חברתית סוציאל-דמוקרטית ציונית, ציונות ועוד... וכמובן: סוציאליזם
+                        <br> התנועה עובדת לפי החזון של בינימין זאב הרצל ז''ל, לפי רוח השלום וחזונו של יצחק רבין ז''ל, לפי החזון של דוד בן גוריון ז''ל (עם נוסח מרקסיסטי)
+                        <br> ולפי חזון של הפילוסוף קארל מרקס. התנועה פועלת בהתמדה לקידום החופש, השיוויון והשלום
+                        <br>מתוך תפיסה אוניברסלית של שיוויון ערך האדם, 
+                        .התנועה תומכת בחזית המאבק נגד סיפוח ולמען השלום, נגד כפייה דתית ונגד כל פעולה לא רצויה ופוגעת באדם אחר</p>
+            </div>
+
+            <div class="controlls">
+                  <div class="control" data-id="about">
+                        <i class="fa fa-arrow-down btn" onclick="scrollpage()"></i>
+                  </div>
+            </div>
+
+            </section>
+
+            <section class="matza" id="matsa">
+                  <div class="matza-text">
+
+                        <h1>מצע ותכניות</h1>
+                        <p>יש לנו מצע, ואף תכניות</p>
+
+                  </div>
+                  <div class="control-2">
+                        <div class="control" data-id="about">
+                              <i class="fa fa-arrow-up btn" onclick="scrollpageu()"></i>
+                        </div>
+                  </div>
+            </section>
+            <script>
+                  var navLinks = document.getElementById("navLinks");
+
+                  function showMenu() {
+                        navLinks.style.right = "0";
+                  }
+
+                  function hideMenu() {
+                        navLinks.style.right = "-200px";
+                  }
+                  function scrollpage() {		
+                        function f() 
+                        {
+                              window.scrollTo(0,i);
+                              if(status==0) {
+                                       i=i+40;
+                                    if(i>=Height){	status=1; } 
+                              } 
+                        setTimeout( f, 0.01 );
+                        }f();
+                  }
+                  var Height=document.documentElement.scrollHeight;
+                  function scrollpageu() {		
+                        function f() 
+                        {
+                              window.scrollTo(0,i);
+                              if(status==0) {
+                                       i=i-40;
+                                    if(i>=Height){	status=1; } 
+                              } 
+                        setTimeout( f, 0.01 );
+                        }f();
+                  }
+                  var Height=document.documentElement.scrollHeight;
+                  var i=1,j=Height,status=0;
+            </script>
+            <script>
+
+            </script>
+
+</body>      
+</html>

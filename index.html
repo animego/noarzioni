@@ -1,0 +1,61 @@
+{%  load static %} 
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="with=device-scale, initial-scale=1">
+      <title>תנועת הנוער הציוני סוציאליסטי</title>
+      <link rel="stylesheet" href="{% static 'styles.css' %}">
+      <link rel="icon" href="{% static 'images/icon.png' %}"/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+<section class="header">
+      <nav>
+            <a href="index.html"><img src="{% static 'images/icon.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                  <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                  <ul>
+                        <li><a href="/kesher">צרו קשר</a></li>
+                        <li><a href="/hofesh-habitoi">הזה של אלעד</a></li>
+                        <li><a href="/matsa">המצע שלנו</a></li>
+                        <li><a href="/">ראשי</a></li>
+                  </ul>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+            </nav>
+
+      <div class="text-box">
+            <h1>תנועת הנוער הציוני סוציאליסטי</h1>
+            <div class="textbox-warpper">
+                  <div class="box b1">"!פועלים של כל הארצות התאחדו"<br>הפילוסוף קארל מארקס ~</div>
+                  <div class="box b2">".לאמיתו של דבר, מטרתה הסופית של כל מפלגה סוציאליסטית היא לבטל את ההבדלים בין אדם לאדם" <br>אפרים קישון ~ </div>
+                  <div class="box b3">".לאדם אין מטרה אחרת בעולם מאשר להשמיד את האישיות הפרטית שלו ובמקומה להעמיד ישות חברתית לחלוטין"<br>פיוטר חדייב ~ </div>
+                  <div class="box b4">"הציונות היא תנועה משיחית. זוהי אולי המילה היחידה ההולמת אותה." <br>דוד בן גוריון ~ </div>
+            </div>
+            <a href="/hiztarfut" class="hero-btn">לחצו בשביל להצטרף אלינו</a>
+
+      </div>
+      
+
+      </section>  
+      
+      <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu() {
+                  navLinks.style.right = "0";
+            }
+
+            function hideMenu() {
+                  navLinks.style.right = "-200px";
+            }
+      </script>
+</body>
+</html>
