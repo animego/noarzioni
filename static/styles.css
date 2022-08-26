@@ -1,0 +1,437 @@
+*{
+      margin: 0;
+      padding: 0;
+      font-family: 'Heebo', sans-serif;
+}
+.header{
+      min-height: 100vh;
+      width: 100%;
+      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner.png);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+}
+nav{
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+      align-items: center;
+}
+nav img{
+      width: 150px;
+
+}
+.nav-links{
+      flex: 1;
+      text-align: center;
+}
+.nav-links ul li{
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+}
+.nav-links ul li a{
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-family: 'Heebo', sans-serif;
+}
+.nav-links ul li::after{
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #f44336;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+      width: 100%;
+}
+.text-box{
+      width: 90%;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+}
+.text-box h1{
+      font-size: 62px;
+}
+
+.hero-btn{
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 12px 34px;
+      font-size: 18px;
+      background: transparent;
+      position: relative;
+      cursor: pointer;
+      transition: 1s;
+}
+.hero-btn:hover{
+      border: 1px solid #f44336;
+      background: #f44336;
+      font-size: 19px;
+      transition: 1s;
+}
+
+nav .fa{
+      display: none;
+}
+
+
+
+@media(max-width:700px){
+      .text-box h1{
+            font-size: 20px;
+      }
+      .nav-links ul li{
+            display: block;
+      }
+      .nav-links{
+            position: absolute;
+            background: #f44336;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: -200px;
+            text-align: left;
+            z-index: 2;
+            transition: 1s;
+      }
+      nav .fa{
+            display: block;
+            color: #fff;
+            margin: 10px;
+            font-size: 22px;
+            cursor: pointer;
+      }
+      .nav-links ul{
+            padding: 30px;
+      }
+}
+
+/*---------about section----------*/
+
+.about-text{
+      font-family: 'Amatic SC', cursive;
+      @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+      position: absolute;
+      color: #fff;
+      width: 100%;
+      padding: 2% 6%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+}
+.about{
+      min-height: 100vh;
+      width: 100%;
+      background-image: linear-gradient(rgba(113, 65, 46, 0.7), rgba(4, 9, 30, 0.7)), url(images/about.jpg);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+}
+.matza{
+      min-height: 100vh;
+      width: 100%;
+      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/matza.jpg);
+      background-position: center;
+      background-size: cover;
+      margin: auto;
+      padding-top: 100px;
+}
+.matza-text{
+      font-family: 'Heebo', sans-serif;
+      position: absolute;
+      color: #fff;
+      width: 100%;
+      padding: 2% 6%;
+      top: 150%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+}
+.matza-text h1{
+      font-size: 36px;
+      font-weight: 600;
+      padding: auto;
+      color: #fff;
+      text-align: center;
+}
+.matza-text p{
+      color: #fff;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 22px;
+      padding: 10px;
+}
+
+
+.hiztarfut{
+      min-height: 100vh;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,50,0.5),rgba(0,0,50,0.5)),url(images/hiztarfut.jpg);
+      background-size: cover;
+      background-position: center;
+}
+.contact-title{
+      margin-top: 0px;
+      color: #fff;
+      text-transform: uppercase;
+      transition: all 4s ease-in-out;
+}
+.contact-title h1{
+      font-size: 32px;
+      line-height: 10px;
+}
+.contact-title h2{
+      padding: 10px;
+      font-size: 16px;
+}
+.contact-form{
+      margin-top: 50px;
+      transition: all 4s ease-in-out;
+}
+.contact-form p{
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+}
+.sendphoto-text{
+      padding: 10px;
+      transition: all 4s ease-in-out;
+      color:#fff;
+}
+.form-control{
+      width: 300px;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid gray;
+      color: #000;
+      font-size: 18px;
+      margin-bottom: 16px;
+      text-align: right;
+      transition: 0.5s;
+}
+.form-control:focus{
+      border-bottom: 2px solid #f44336;
+}
+
+input{
+      height: 45px;
+}
+form .submit{
+      background: #ff5722;
+      text-align: center;
+      border-color: transparent;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      height: 50px;
+      margin-top: 20px;
+      transition: 0.5s;
+}
+
+form .submit:hover{
+      background-color: #f44336;
+      cursor: pointer;
+}
+
+.textbox-warpper{
+      position: absolute;
+      width: 100%;
+      margin: 100px 0 10px;
+      font-size: 18px;
+      color: #fff;
+}
+
+.box{
+      font-size: 18px;
+      font-weight: bold;
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+}
+
+.b1{
+      animation: ani1 15s infinite;
+}
+.b2{
+      animation: ani2 15s infinite;
+}
+.b3{
+      animation: ani3 15s infinite;
+}
+.b4{
+      animation: ani4 15s infinite;
+}
+
+@keyframes ani1{
+      0%{
+            opacity: 0;
+      }
+      20%{
+            opacity: 1;
+      }
+      25%{
+            opacity: 0;
+      }
+}
+@keyframes ani2{
+      25%{
+            opacity: 0;
+      }
+      45%{
+            opacity: 1;
+      }
+      50%{
+            opacity: 0;
+      }
+}
+@keyframes ani3{
+      50%{
+            opacity: 0;
+      }
+      70%{
+            opacity: 1;
+      }
+      75%{
+            opacity: 0;
+      }
+}
+@keyframes ani4{
+      75%{
+            opacity: 0;
+      }
+      95%{
+            opacity: 1;
+      }
+      100%{
+            opacity: 0;
+      }
+}
+
+.elad{
+      min-height: 100vh;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,50,0.5),rgba(0,0,50,0.5)),url(images/elad.jpg);
+      background-size:auto;
+      background-position: top;
+}
+
+.row{
+      margin-top: 5%;
+      display: flex;
+      justify-content: space-between;
+}
+.imgs{
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      padding-top: 100px;
+}
+.img-col{
+      flex-basis: 31%;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      text-align: center;
+}
+.img-col img{
+      width: 100%;
+      border-radius: 10px;
+      transition: 0.5s;
+}
+.img-col img:hover{
+      transform: scale(1.1);
+}
+.beaia{
+      color: #f44336;
+}
+.beaia h1 {
+      font-size: 36px;
+      font-weight: 600;
+      padding: 50px;
+      text-align: center;
+}
+.beaia h2 {
+      padding: auto;
+      font-size: 27px;
+      color: #fff;
+}
+.beaia p {
+      color: aqua;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 22px;
+      padding: 10px;
+}
+/*--Controlls*/
+.controlls{
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      right: 3%;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(-50%);
+}
+.control{
+      padding: 1rem;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #f44336;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 1px 0;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      transition: 0.5s;
+}
+.control-2{
+      position: absolute;
+      z-index: 10;
+      top: 170%;
+      right: 3%;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(-50%);
+}
+.control:hover{
+      color: #000;
+}
+.control-3{
+      position: absolute;
+      z-index: 10;
+      top: 150%;
+      right: 3%;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(-50%);
+}

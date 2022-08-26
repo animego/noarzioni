@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="with=device-scale, initial-scale=1">
+      <title>תנועת הנוער הציוני סוציאליסטי</title>
+      <link rel="stylesheet" href="{% static 'styles.css' %}">
+      <link rel="icon" href="{% static 'images/icon.png' %}"/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+      <section class="elad">
+            
+            <nav>
+                  <a href="/"><img src="{% static 'images/icon.png' %}"></a>
+                  <div class="nav-links" id="navLinks">
+                        <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                        <ul>
+                              <li><a href="/kesher">צרו קשר</a></li>
+                              <li><a href="/hofesh-habitoi">הזה של אלעד</a></li>
+                              <li><a href="/matsa">המצע שלנו</a></li>
+                              <li><a href="/">ראשי</a></li>
+                        </ul>
+                  </div>
+                  <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+                  </nav>
+
+            <div class="text-box">
+                  <h1>מדור חופש הביטוי</h1>
+                  <p>.המדור נועד לכלל הרשת, אך לבני נוער בייחוד<br>
+                 noarsocialistic@gmail.com לשליחה אנונימית שלחו למייל</p>
+            </div>
+
+      </section>
+
+      <section class="imgs">
+            
+            <h1>המדור</h1>
+
+            <div class="row">
+                  <div class="img-col">
+                        <img src="{%static 'images/gorbachov.jpg'%}">
+                        <p>גורבצ'וב מפרק את ברית המועצות עם פטיש ומגל</p>
+                  </div>
+                  <div class="img-col">
+                        <img src="{%static 'images/elad.jpg'%}">
+                        <p>נשלח ללא הסבר</p>
+                  </div>
+                  <div class="img-col">
+                        <img src="{%static 'images/geava.jpg'%}">
+                        <p>נשלח ללא הסבר</p>
+                  </div>
+            </div>
+      </section>
+      <section class="imgs">
+            <div class="row">
+                  <div class="img-col">
+                        <img src="{% static 'images/germaniahamizrahit.jpg'%}">
+                        <p>נשלח ללא הסבר</p>
+                  </div>
+                  <div class="img-col">
+                        <img src="{%static 'images/israelvspalestine.jpg'%}">
+                        <p>נשלח ללא הסבר</p>
+                  </div>
+                  <div class="img-col">
+                        <img src="{%static 'images/putin.jpg'%}">
+                        <p>נשלח ללא הסבר</p>
+                  </div>
+            </div>
+      </section>
+      <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu() {
+                  navLinks.style.right = "0";
+            }
+
+            function hideMenu() {
+                  navLinks.style.right = "-200px";
+            }
+      </script>
+</body>
+</html>

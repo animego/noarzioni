@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="hebrew">
+      <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="with=device-scale, initial-scale=1">
+            <title>תנועת הנוער הציוני סוציאליסטי</title>
+            <link rel="stylesheet" href="{%static 'styles.css'%}">
+            <link rel="icon" href="{%static 'images/icon.png'%}"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      </head>
+      <body>
+            <section class="hiztarfut">
+
+                  <nav>
+                        <a href="/"><img src="{%static 'images/icon.png'%}"></a>
+                        <div class="nav-links" id="navLinks">
+                              <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                              <ul>
+                                    <li><a href="/kesher">צרו קשר</a></li>
+                                    <li><a href="/hofesh-habitoi">הזה של אלעד</a></li>
+                                    <li><a href="/matsa">המצע שלנו</a></li>
+                                    <li><a href="/">ראשי</a></li>
+                              </ul>
+                        </div>
+                        <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+                        </nav>
+
+                  <div class="contact-title">
+                        <h1>צרו קשר</h1>
+                        <h2>רוצים להצטרף אבל לא בטוחים? סתם לשאול שאלה? זה המקום</h2>
+                  </div>
+                  <form id="contactusForm" method="POST">
+                        {% csrf_token %}
+                        <input type="text" name="name" class="form-control" placeholder="שם" required>
+                        <br>
+                        <input type="email" name="email" class="form-control" placeholder="אימייל" required>
+                        <br>
+                        <textarea name="subject" class="form-control" placeholder="הודעה" required></textarea>
+                        <br>
+                        <input type="submit" name="submit" class="form-control submit" value="שלחו את ההודעה">
+                  </form>
+            </section>
+            <script>
+                  var navLinks = document.getElementById("navLinks");
+      
+                  function showMenu() {
+                        navLinks.style.right = "0";
+                  }
+      
+                  function hideMenu() {
+                        navLinks.style.right = "-200px";
+                  }
+            </script>
+      </body>
+</html>
